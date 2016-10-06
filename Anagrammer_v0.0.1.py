@@ -23,8 +23,8 @@ def main():
   print("###Written by Mikael Brenner###")
   print("-------------------------------")
   print("  \n") 
-  file1 = raw_input("Type the name of the container file(with extension):   ")
-  selected = raw_input("Select your usage mode: \n 1-Letters \n 2-Numbers \n 3-Mixed \n 0-Exit \n")
+  file1 = input("Type the name of the container file(with extension):   ")
+  selected = input("Select your usage mode: \n 1-Letters \n 2-Numbers \n 3-Mixed \n 0-Exit \n")
   print(" \n")
   with open(file1,"r+") as fOn:
     if selected == "1":
