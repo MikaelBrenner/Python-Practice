@@ -1,2 +1,2 @@
 # Python-Programs
-Repository to store practice Python Programs
+Repository to store my Python practice Programs
