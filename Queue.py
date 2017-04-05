@@ -18,7 +18,8 @@ class Queue:
 		rpr = ''.join(listrpr)
 		return rpr	
 
-	def _refresh_first(self):	#Does precisely what the name says
+	def _refresh_first(self):	
+		#Does precisely what the name says
 		for k in self._list:
 			if k != None:
 				return k
@@ -41,7 +42,7 @@ class Queue:
 	def enqueue(self,nw):
 		#Function that adds members to the Queue
 		if nw == None:
-			raise ValueError("Can't enqueue nothing!!!")  #Refuses enqueue requests for None objects
+			raise ValueError("Can't enqueue nothing!")  #Refuses enqueue requests for None objects
 		self._list.append(nw)	#Enqueue the received value
 		self._n += 1			#Increase the number of elements
 		if self._first == None:		#Deals with the first enqueued object
@@ -58,3 +59,15 @@ class Queue:
 		self._first = self._refresh_first()		#Get the new list first element
 		self._first_location = self._list.index(self._first)	#Re-set the location variable
 		return temp_first
+
+if __name__ == '__main__':
+	#Tests
+	test = Queue()
+	test.is_empty()
+	for i in range(12):
+        test.enqueue(i)
+    for k in range(5):
+        print(test.dequeue())
+    print(test.first())
+    print("Everything is okay!")
+ 
